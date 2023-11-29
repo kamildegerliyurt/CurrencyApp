@@ -8,7 +8,7 @@
 
 
 <p align="center">
-  <img width="350" height="150" src="https://github.com/kamildegerliyurt/CurrencyApp/assets/139812195/5b3dc996-d003-40c0-8471-3bf8d1c4872f">
+  <img width="300" height="300" src="https://github.com/kamildegerliyurt/CurrencyApp/assets/139812195/5b3dc996-d003-40c0-8471-3bf8d1c4872f">
 </p>
 
 
