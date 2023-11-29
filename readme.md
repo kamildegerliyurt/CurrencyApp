@@ -13,8 +13,5 @@
 
 
 
-<img src="https://github.com/kamildegerliyurt/CurrencyApp/assets/139812195/b8e515b2-7bbd-44d7-b715-227bd52970f2" width="200" height="400" />
-
-
 ![rounded-in-photoretrica(1)](https://github.com/kamildegerliyurt/CurrencyApp/assets/139812195/b8e515b2-7bbd-44d7-b715-227bd52970f2)
 
