@@ -6,12 +6,12 @@ import { CurrencyItem } from '../components/';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 
 const Home = () => {
-  //--------------------------------------------------------
+
   const [currencyData, setCurrencyData] = useState([])
   const [errorMessage, setErrorMessage] = useState('')
   const [searchText, setSearchText] = useState('')
   const [filteredCurrencyData, setFilteredCurrencyData] = useState([])
-  //--------------------------------------------------------
+ 
   useEffect(() => {
     axios.get('https://api.apilayer.com/currency_data/change', {
       headers:{'apikey': process.env.EXPO_PUBLIC_API_KEY}
@@ -25,7 +25,7 @@ const Home = () => {
       .catch((err) => setErrorMessage(err))
 
   }, []);
-  //--------------------------------------------------------
+
   const handleSearch = (value) => {
     setSearchText(value)
 
@@ -36,7 +36,7 @@ const Home = () => {
   setFilteredCurrencyData(filteredData)
 
   }
-  //--------------------------------------------------------
+  
   return (
     <ImageBackground style={{flex: 1, resizeMode: 'cover',}}
                         source={require('../assets/trader.jpg')} 
