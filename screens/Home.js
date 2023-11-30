@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { FlatList, StyleSheet, Text, TextInput, View, ImageBackground, } from 'react-native';
+import { FlatList, StyleSheet, KeyboardAvoidingView, SafeAreaView, Text, TextInput, View, ImageBackground, ScrollView, } from 'react-native';
 import axios from 'axios';
-import { SafeAreaView } from 'react-native-safe-area-context';
 import { CurrencyItem } from '../components/';
-import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 
 const Home = () => {
 
@@ -38,19 +37,22 @@ const Home = () => {
   }
   
   return (
+    <KeyboardAvoidingView style={{flex:1}}>
     <ImageBackground style={{flex: 1, resizeMode: 'cover',}}
                         source={require('../assets/trader.jpg')} 
                        >
-      <KeyboardAwareScrollView >
 
-        <SafeAreaView style={styles.container}>
+      <SafeAreaView style={styles.container}>
 
+
+       
           <TextInput style={styles.textInputContainer}
                     placeholder="Search..."
                     placeholderTextColor="gray"
                     onChangeText={handleSearch}
                     value={searchText}
                     />         
+
 
           <View style={styles.currencyContainer}>
 
@@ -77,8 +79,8 @@ const Home = () => {
             </View>
           </View>
         </SafeAreaView>
-      </KeyboardAwareScrollView>
     </ImageBackground>
+    </KeyboardAvoidingView>
   );
 };
 
@@ -87,6 +89,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+    marginTop:20,
   },
   textInputContainer: {
     borderWidth: 0.2,
@@ -108,8 +111,6 @@ const styles = StyleSheet.create({
     borderColor:"#F4EEEE",
     marginVertical:5,
     width:'95%',
-    alignItems: 'center',
-    justifyContent: 'center',
     backgroundColor: 'transparent',
   },
   headersContainer: {
